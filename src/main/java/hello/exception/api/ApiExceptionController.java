@@ -1,5 +1,6 @@
 package hello.exception.api;
 
+import hello.exception.exception.UserException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +19,9 @@ public class ApiExceptionController {
         }
         if (id.equals("bad")) {
             throw new IllegalArgumentException("bad");
+        }
+        if(id.equals("user-ex")){
+            throw new UserException("user-ex");
         }
 
         return new MemberDto(id, "member-" + id);
