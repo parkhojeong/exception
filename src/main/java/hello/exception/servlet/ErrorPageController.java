@@ -33,11 +33,11 @@ public class ErrorPageController {
     }
 
     private void printErrorInfo(HttpServletRequest request) {
-        Iterator<String> iterator = request.getAttributeNames().asIterator();
+        /*Iterator<String> iterator = request.getAttributeNames().asIterator();
         while (iterator.hasNext()) {
             String attributeName = iterator.next();
             log.info("{}: {}", attributeName, request.getAttribute(attributeName));
-        }
+        }*/
         log.info("ERROR_EXCEPTION: {}", request.getAttribute(ERROR_EXCEPTION));
         log.info("ERROR_EXCEPTION_TYPE: {}", request.getAttribute(ERROR_EXCEPTION_TYPE));
         log.info("ERROR_MESSAGE: {}", request.getAttribute(ERROR_MESSAGE));
